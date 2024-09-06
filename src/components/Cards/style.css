@@ -1,0 +1,63 @@
+/* Base styles */
+.my-card {
+    box-shadow: var(--shadow);
+    min-width: 300px; /* Adjusted for smaller screens */
+    max-width: 100%; /* Ensures cards do not exceed container width */
+    margin: 1rem; /* Reduced margin for smaller screens */
+    border-radius: 0.5rem;
+    flex: 1 1 300px; /* Allows cards to grow/shrink based on available space */
+    font-family: "Montserrat", sans-serif;
+    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
+}
+
+.my-card:hover {
+    transform: scale(1.05); /* Optional: Hover effect to enhance interactivity */
+}
+
+.ant-card-head-title {
+    margin: 0 !important;
+    font-weight: 500;
+}
+
+.my-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 2rem auto;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+/* Ensures paragraphs inside the card have no default margins */
+.my-card p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .my-row {
+        justify-content: center; /* Center items on smaller screens */
+        gap: 10px;
+        margin: 1.5rem auto;
+    }
+
+    .my-card {
+        min-width: 250px; /* Further reduce minimum width for smaller devices */
+        margin: 1rem; /* Adjust margin for tighter layouts */
+        flex: 1 1 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-row {
+        flex-direction: column; /* Stack items vertically on very small screens */
+        align-items: stretch; /* Stretch items to fill the available space */
+    }
+
+    .my-card {
+        width: 100%; /* Full width for cards on small screens */
+        min-width: auto; /* Remove min-width to avoid layout issues */
+        margin: 0.5rem 0; /* Adjust vertical spacing */
+    }
+}

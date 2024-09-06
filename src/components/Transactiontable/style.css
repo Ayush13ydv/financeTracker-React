@@ -1,0 +1,94 @@
+.table-transaction-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .search-icon {
+    width: 16px;
+    margin-right: 0.5rem;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 0.5rem;
+  }
+  
+  .filter-select {
+    min-width: 120px;
+  }
+  
+  .table-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .table-title {
+    margin: 0;
+  }
+  
+  .sort-radio-group {
+    margin-right: 1rem;
+  }
+  
+  .csv-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: '400px',
+  }
+  
+  .export-btn, .import-btn {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .transaction-table {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .table-transaction-container {
+        width: 90%;
+    }
+    .transaction-table {
+        width: 80%;
+        margin-left:40px;
+      }
+    .filters-container, .table-controls {
+      flex-direction: column;
+    }
+  
+    .search-container {
+      margin-bottom: 1rem;
+    }
+  
+    .csv-controls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .export-btn, .import-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
